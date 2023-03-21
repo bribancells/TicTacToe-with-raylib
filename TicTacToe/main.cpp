@@ -49,7 +49,7 @@ bool inRange(float low, float high, float x) {
 
 
 void checkForWin() {
-
+    //kinda got lazy here 
     for (int i = 0; i < 3; i++) {
         
         //horizontal
@@ -60,7 +60,13 @@ void checkForWin() {
         else if( ((board[0][i] == "x") && (board[1][i] == "x") && (board[2][i] == "x")) || ((board[0][i] == "o") && (board[1][i] == "o") && (board[2][i] == "o")) ) {
             gameOver = true;
         }
-            
+        //diagonal
+        else if ( ((board[0][0] == "x") && (board[1][1] == "x") && (board[2][2] == "x")) || ((board[0][0] == "o") && (board[1][1] == "o") && (board[2][2] == "o")) ) {
+            gameOver = true;
+        }
+        else if (((board[0][2] == "x") && (board[1][1] == "x") && (board[2][0] == "x")) || ((board[0][2] == "o") && (board[1][1] == "o") && (board[2][0] == "o"))) {
+            gameOver = true;
+        }
         
     }
 }
