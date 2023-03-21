@@ -127,8 +127,11 @@ int main(void)
                     }
                 }
             }
-
+            if (IsKeyPressed(KEY_R)) {
+                gameOver = true;
+            }
         }
+
         else {
             DrawText("Click ENTER to play again", GetScreenWidth() / 2 - MeasureText("Click ENTER to play again", 20) / 2, GetScreenHeight() / 2 - 50, 20, GRAY);
             if (IsKeyPressed(KEY_ENTER)) {
