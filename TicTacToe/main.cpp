@@ -24,9 +24,7 @@ void nextTurn() {
     if (currentPlayer == "x") {
         currentPlayer = "o";
     }
-    else {
-        currentPlayer = "x";
-    }
+    currentPlayer = "x";
 }
 
 void drawBoard() {
@@ -42,9 +40,7 @@ bool inRange(float low, float high, float x) {
     if (x > low && x < high) {
         return true;
     }
-    else {
-        return false;
-    }
+    return false;
 }
 
 
@@ -84,7 +80,7 @@ int main(void)
     while (!WindowShouldClose())
     {
 
-        //Begine drawing
+        //Begin drawing
         BeginDrawing();
         ClearBackground(RAYWHITE);
         
